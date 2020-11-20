@@ -4,6 +4,7 @@ namespace Leady\SingleArticle;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
 
 class ServiceProvider extends LaravelServiceProvider
 {
