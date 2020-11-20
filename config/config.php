@@ -1,4 +1,4 @@
 <?php
 return [
-    'default_parent_id' => 0,
+    'route_resource' => 'single_articles',
 ];

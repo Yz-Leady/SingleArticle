@@ -3,6 +3,7 @@
 namespace Leady\SingleArticle;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
+use Illuminate\Routing\Router;
 
 class ServiceProvider extends LaravelServiceProvider
 {
@@ -18,6 +19,13 @@ class ServiceProvider extends LaravelServiceProvider
             $this->publishes([__DIR__ . '/../config/config.php' => config_path('single-article.php')], 'single-article');
             $this->loadMigrationsFrom(__DIR__ . '/../database/migrations/');
         }
+        Route::group([
+            'prefix'     => config('admin.route.prefix'),
+            'namespace'  => 'Leady\SingleArticle\Controllers',
+            'middleware' => config('admin.route.middleware'),
+        ], function (Router $router) {
+            $router->resource(config('single-article.route_resource'), 'SingleArticleController');
+        });
     }
 
     /**
