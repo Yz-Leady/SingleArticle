@@ -15,11 +15,21 @@ class SingleArticleController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new SingleArticle);
+        $grid->disableFilter();
+        $grid->disableExport();
+        $grid->disableRowSelector();
+        $grid->disableColumnSelector();
+
+        $grid->actions(function($actions){
+            $actions->disableDelete();
+            $actions->disableEdit();
+        });
         $grid->column('id', '#ID#');
         $grid->column('title', '标题')->editable();
         $grid->column('key', '关键字');
         $grid->column('created_at', '创建时间');
         $grid->column('updated_at', '更新时间');
+        return $grid;
     }
 
     protected function form()
@@ -32,6 +42,7 @@ class SingleArticleController extends AdminController
             $form->display('key', '关键字');
         }
         $form->ueditor('content', '详情内容')->required();
+        return $form;
     }
 
 }

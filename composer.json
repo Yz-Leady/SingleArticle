@@ -24,7 +24,7 @@
                 "Leady\\SingleArticle\\ServiceProvider"
             ],
             "aliases": {
-                "SingleArticle": "Leady\\SingleArticle\\Facade"
+                "LeadySingleArticle": "Leady\\SingleArticle\\Facade"
             }
         }
     }
