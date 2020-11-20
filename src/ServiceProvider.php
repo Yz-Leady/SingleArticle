@@ -1,6 +1,6 @@
 <?php
 
-namespace Leady;
+namespace Leady\SingleArticle;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
