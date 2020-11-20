@@ -1,0 +1,31 @@
+{
+    "name": "YzLeady/SingleArticle",
+    "description": "单文章管理",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leady",
+            "email": "149307205@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "laravel/framework": "*",
+        "encore/laravel-admin": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leady\\SingleArticle\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leady\\SingleArticle\\ServiceProvider"
+            ],
+            "aliases": {
+                "SingleArticle": "Leady\\SingleArticle\\Facade"
+            }
+        }
+    }
+}
