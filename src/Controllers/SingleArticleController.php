@@ -21,8 +21,7 @@ class SingleArticleController extends AdminController
         $grid->disableColumnSelector();
 
         $grid->actions(function($actions){
-            $actions->disableDelete();
-            $actions->disableEdit();
+            $actions->disableView();
         });
         $grid->column('id', '#ID#');
         $grid->column('title', '标题')->editable();

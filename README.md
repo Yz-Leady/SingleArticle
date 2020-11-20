@@ -6,6 +6,8 @@ $ composer require yz-leady/single-article
 ```
 ## 2.初始化
 ```shell script
+php artisan vendor:publish --provider="Leady\SingleArticle\ServiceProvider"
+
 php artisan migrate
 ```
 ## 3.前端获取内容
